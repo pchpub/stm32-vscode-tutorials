@@ -5,6 +5,7 @@ email: <pch@pch.pub>
 
 ## 目录
 
+0. [简介](#简介)
 1. [准备需要的材料](#1-准备需要的材料)
 2. [搭建环境](#2-搭建环境)
 3. [使用 STM32CubeMX 生成代码](#3-使用-stm32cubemx-生成代码)
@@ -13,6 +14,20 @@ email: <pch@pch.pub>
 6. [烧录](#6-烧录)
 7. [调试](#7-调试)
 8. [参考资料](#8-参考资料)
+9. [附录](#附录)
+10. [License](#license)
+
+---
+
+## 简介
+
+本文档主要介绍如何使用 `VSCode`、`STM32CubeCLT`、`STM32CubeMX`、`HAL` 库进行 `STM32` 开发。
+VSCode 是一个轻量级的代码编辑器，支持多种语言，支持插件扩展，是一个非常适合嵌入式开发的工具。
+STM32CubeCLT 是一个命令行工具，可以用来编译、烧录、调试等。
+STM32CubeMX 是一个图形化工具，可以用来配置 `STM32` 芯片的各种参数，生成代码。
+HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供了一些高级的接口，方便开发者使用。
+
+注：本文档面向初学者，不涉及太多细节。更多细节请参考官方文档。
 
 ---
 
@@ -25,7 +40,7 @@ email: <pch@pch.pub>
   - 本例使用的开发板的mcu为 [**STM32F103C8T6**](https://www.st.com.cn/zh/microcontrollers-microprocessors/stm32f103.html)
 - JLink/STLink/DAPLink
   - 本例使用的是 [**STLink-V3set**](https://www.st.com.cn/zh/development-tools/stlink-v3set.html)，后文未说明的地方默认使用此工具
-  - 课上推荐的是 JLink-OB V2
+  - 注：课上推荐的是 JLink-OB V2，实际应用中应按照调试器的实际情况进行配置
 - 一些杜邦线/排线
 - 5V电源
 - 一台 x86 电脑（ `%USERPROFILE%` 不要带中文）
@@ -180,11 +195,15 @@ email: <pch@pch.pub>
 4. 运行和调试(下方工具条/Ctrl+Shift+D)。
 5. 可进行单步调试、查看变量、查看寄存器等。
 6. (可选) 使用串口输出调试信息。
+   - 下载 `VSCode` 扩展 `Serial Monitor`
    - 在 `STM32CubeMX` 中开启 `USART`。
-   - 在 `VSCode` 中配置 `printf`。
-   - 在代码中使用 `printf`。
+   - 将 `USART` 引脚连接到调试器。
+   - 在代码中使用 `HAL_UART_Transmit` 或 `HAL_UART_Transmit_IT` 进行输出。
+   - 输入同理，略。
+   - 在 `VSCode` 中打开串口监视器。
 7. (可选) 使用 `SWO` 输出调试信息。
     - 在 `STM32CubeMX` 中开启 `SWO`。
+    - 将 `SWO` 引脚连接到调试器。
     - 在 `VSCode` 中配置 `SWO`。
     - 在代码中使用 `printf`。
 
