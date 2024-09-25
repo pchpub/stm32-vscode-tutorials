@@ -9,6 +9,7 @@ on:
     paths:
       - README.md
       - '/static/**'
+  workflow_dispatch:
 
 jobs:
   converttopdf:
