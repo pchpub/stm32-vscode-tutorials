@@ -149,7 +149,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
 1. 打开 `VSCode`。
 2. 打开工作区。
 3. 连接开发板。
-   - ![STLink-V3set和开发板连接](/static/pics/stlink-link-with-testboard.jpg "STLink-V3set")
+   - <div align=left><img src="./static/pics/stlink-link-with-testboard.jpg" alt="STLink-V3set" title="STLink-V3set和开发板连接" width="45%"></div>
 
      以 STLink-V3set SWD 接线为例:
 
@@ -163,7 +163,8 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
 
    - 打开电源开关。
 4. 点击最下方的烧录按钮。
-   - ![烧录按钮](/static/pics/button2.png "Burn Button")
+   - <div align=left><img src="./static/pics/button2.png" alt="Burn Button" title="烧录按钮" width="8%"></div>
+   <!-- - ![烧录按钮](/static/pics/button2.png "Burn Button") -->
    - 烧录成功示例：
 
      ```shell
