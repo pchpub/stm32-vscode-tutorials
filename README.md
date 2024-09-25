@@ -73,6 +73,18 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
 3. 配置芯片。
 4. 生成代码。
 
+- <details>
+   <summary>详细步骤</summary>
+      - <div align=left><img src="./static/pics/stm32cubemx0.png" alt="Generate Code" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx1.png" alt="Generate Code" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx2.png" alt="Generate Code" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx3.png" alt="Generate Code" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx4.png" alt="Generate Code" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx5.png" alt="Generate Code" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx6.png" alt="系统时钟参考配置" title="生成代码" width="45%"></div>
+      - <div align=left><img src="./static/pics/stm32cubemx7.png" alt="Generate Code" title="生成代码" width="45%"></div>
+   </details>
+
 ---
 
 ### 4. 使用 `HAL` 库开发（以点灯为例）
@@ -87,20 +99,16 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
    - 选择 `Cortex-M 项目`。
    - 输入项目名称。
    - 切换工作区。
-3. 在 `STM32CubeMX` 中生成代码。
-4. 返回 `VSCode`：
-   - 打开刚才的工作区。
-   - 在 `EIDE` 中：
-     - 按照教程添加项目资源。
-     - 编辑构建配置。
-     - 编辑烧录配置。
-     - 编辑项目属性。
-     - 生成调试配置。
-       - 配置 `Cortex-Debug`
-       - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32)
-       - 配置 `Cortex-Debug` 的 `svdFile` 选项。
-       - 注：使用 `JLink` 的话，调试配置请选择 `JLink`/`OpenOCD`。
-5. 编写代码。
+   - 按照教程添加项目资源。
+   - 编辑构建配置。
+   - 编辑烧录配置。
+   - 编辑项目属性。
+   - 生成调试配置。
+     - 配置 `Cortex-Debug`
+     - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32)
+     - 配置 `Cortex-Debug` 的 `svdFile` 选项。
+     - 注：使用 `JLink` 的话，调试配置请选择 `JLink`/`OpenOCD`。
+3. 编写代码。
    - 打开 `Core/Src/main.c`。
    - 编写代码。
    - 示例代码：
@@ -163,8 +171,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
 
    - 打开电源开关。
 4. 点击最下方的烧录按钮。
-   - <div align=left><img src="./static/pics/button2.png" alt="Burn Button" title="烧录按钮" width="8%"></div>
-   <!-- - ![烧录按钮](/static/pics/button2.png "Burn Button") -->
+   - ![烧录按钮](./static/pics/button2.png "Burn Button")
    - 烧录成功示例：
 
      ```shell
@@ -199,6 +206,10 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
    - 下载 `VSCode` 扩展 `Serial Monitor`
    - 在 `STM32CubeMX` 中开启 `USART`。
    - 将 `USART` 引脚连接到调试器。
+     > **注意**  
+     > 如果用的STLink-V3set,则需要将开发板的 `USART` 的 `TX` 和 `RX` 引脚连接到 `STLink` 的 `TX` 和 `RX`。  
+     > 即 `USART1_TX` 连接到 `TX`，`USART1_RX` 连接到 `RX`。  
+     > 这不是编写错误，更多信息请查询 [STLink-V3set 用户手册](https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf)。
    - 在代码中使用 `HAL_UART_Transmit` 或 `HAL_UART_Transmit_IT` 进行输出。
    - 输入同理，略。
    - 在 `VSCode` 中打开串口监视器。
