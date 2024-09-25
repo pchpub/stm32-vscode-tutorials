@@ -134,7 +134,7 @@ email: <pch@pch.pub>
 1. 打开 `VSCode`。
 2. 打开工作区。
 3. 连接开发板。
-   - ![STLink-V3set和开发板连接](/static/pic/stlink-link-with-testboard.jpg "STLink-V3set")
+   - ![STLink-V3set和开发板连接](/static/pics/stlink-link-with-testboard.jpg "STLink-V3set")
 
      以 STLink-V3set SWD 接线为例:
 
@@ -148,7 +148,7 @@ email: <pch@pch.pub>
 
    - 打开电源开关。
 4. 点击最下方的烧录按钮。
-   - ![烧录按钮](/static/pic/button2.png "Burn Button")
+   - ![烧录按钮](/static/pics/button2.png "Burn Button")
    - 烧录成功示例：
 
      ```shell
@@ -200,11 +200,11 @@ email: <pch@pch.pub>
 
 ## 附录
 
-pdf 版本请查看 [这里](/converted/README.pdf)。
+pdf 版本请查看 [这里](https://github.com/pchpub/stm32-vscode-tutorials/actions)。
 
 ## License
 
 本文档遵循
-[Apache License 2.0](LICENSE)
+[Apache License 2.0](https://github.com/pchpub/stm32-vscode-tutorials/blob/main/LICENSE)
 
 <!-- by PCH pch@pch.pub -->
