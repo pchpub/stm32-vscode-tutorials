@@ -21,8 +21,8 @@ jobs:
         with:
           input_path: ./
           output_dir: converted
-        #   images_dir: static/pics
-        #   image_import: ./images
+          images_dir: static/pics
+          image_import: /static/pics
           build_html: false
       - uses: actions/upload-artifact@v4
         name: "Upload PDF Files"
