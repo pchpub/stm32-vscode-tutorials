@@ -198,6 +198,10 @@ email: <pch@pch.pub>
 
 ---
 
+## 附录
+
+pdf 版本请查看 [这里](/converted/README.pdf)。
+
 ## License
 
 本文档遵循
