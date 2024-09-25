@@ -194,7 +194,7 @@ email: <pch@pch.pub>
 
 1. HAL 库官方文档目录：`%USERPROFILE%\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\STM32F103xB_User_Manual.chm`  
    (以实际路径为准)
-2. [STLink-V3set 用户手册](/static/pdf/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf)
+2. [STLink-V3set 用户手册](https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf)
 
 ---
 
