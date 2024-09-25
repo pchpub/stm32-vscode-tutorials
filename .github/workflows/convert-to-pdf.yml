@@ -20,7 +20,7 @@ jobs:
         with:
           input_path: ./
           output_dir: converted
-          images_dir: static/pics
+        #   images_dir: static/pics
         #   image_import: ./images
           build_html: false
       - uses: actions/upload-artifact@v3
