@@ -206,6 +206,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
    - 下载 `VSCode` 扩展 `Serial Monitor`
    - 在 `STM32CubeMX` 中开启 `USART`。
    - 将 `USART` 引脚连接到调试器。
+   - <div align=left><img src="./static/pics/uart0.png" alt="TX-TX_and_RX-RX" title="UART串口" width="45%"></div>
      > **注意**  
      > 如果用的STLink-V3set,则需要将开发板的 `USART` 的 `TX` 和 `RX` 引脚连接到 `STLink` 的 `TX` 和 `RX`。  
      > 即 `USART1_TX` 连接到 `TX`，`USART1_RX` 连接到 `RX`。  
