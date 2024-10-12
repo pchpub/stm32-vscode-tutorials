@@ -102,7 +102,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
      - 打开eide
      - 点击 `项目资源`, 添加代码所在的文件夹
        - 通常为 `Core` 和 `Drivers` 文件夹
-     - 点击`构建脚本路径`, 添加 .ld 文件
+     - 点击`链接脚本路径`, 添加 .ld 文件
      - 点击项目属性 - 包含目录
        - 添加 `Core/Inc` 和 `Drivers/STM32F1xx_HAL_Driver/Inc` 和其它文件夹
        - (所需要添加的文件夹为makefile中的C_INCLUDES包含的目录)
