@@ -106,7 +106,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
      - 点击项目属性 - 包含目录
        - 添加 `Core/Inc` 和 `Drivers/STM32F1xx_HAL_Driver/Inc` 和其它文件夹
        - (所需要添加的文件夹为 `Makefile`文件 中的 `C_INCLUDES` 包含的目录)
-     - 点击项目属性 - 宏定义
+     - 点击 预处理宏定义
        - 添加 `STM32F103xB` 和 `USE_HAL_DRIVER` 和其它宏定义
        - (所需要添加的宏定义为makefile中的C_DEFS包含的宏定义)
    - 编辑构建配置。
