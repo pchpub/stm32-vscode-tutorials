@@ -217,10 +217,12 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
    - 在 `STM32CubeMX` 中开启 `USART`。
    - 将 `USART` 引脚连接到调试器。
    - <div align=left><img src="./static/pics/uart0.png" alt="TX-TX_and_RX-RX" title="UART串口" width="45%"></div>
-     > **注意**  
-     > 如果用的STLink-V3set,则需要将开发板的 `USART` 的 `TX` 和 `RX` 引脚连接到 `STLink` 的 `TX` 和 `RX`。  
-     > 即 `USART1_TX` 连接到 `TX`，`USART1_RX` 连接到 `RX`。  
-     > 这不是编写错误，更多信息请查询 [STLink-V3set 用户手册](https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf)。
+  
+   > **注意**  
+   > 如果用的STLink-V3set,则需要将开发板的 `USART` 的 `TX` 和 `RX` 引脚连接到 `STLink` 的 `TX` 和 `RX`。  
+   > 即 `USART1_TX` 连接到 `TX`，`USART1_RX` 连接到 `RX`。  
+   > 这不是编写错误，更多信息请查询 [STLink-V3set 用户手册](https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf)。
+
    - 在代码中使用 `HAL_UART_Transmit` 或 `HAL_UART_Transmit_IT` 进行输出。
    - 输入同理，略。
    - 在 `VSCode` 中打开串口监视器。
