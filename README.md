@@ -117,6 +117,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
      - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32) (比如 STM32F103.svd)
      - 配置 `Cortex-Debug` 的 `svdFile` 选项。
      - 注：使用 `JLink` 的话，调试配置请选择 `JLink`/`OpenOCD`。
+   - 把 `startup_stm32f103xb.s` 文件移动到 /Core/Src 文件夹下
 3. 编写代码。
    - 打开 `Core/Src/main.c`。
    - 编写代码。
