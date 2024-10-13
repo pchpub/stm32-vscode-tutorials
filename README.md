@@ -108,13 +108,13 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
        - (所需要添加的文件夹为 `Makefile`文件 中的 `C_INCLUDES` 包含的目录)
      - 点击 预处理宏定义
        - 添加 `STM32F103xB` 和 `USE_HAL_DRIVER` 和其它宏定义
-       - (所需要添加的宏定义为makefile中的C_DEFS包含的宏定义)
+       - (所需要添加的宏定义为makefile中的C_DEFS包含的宏定义 不包含`-D`前缀)
    - 编辑构建配置。
    - 编辑烧录配置。
    - 编辑项目属性。
    - 生成调试配置。
      - 配置 `Cortex-Debug`
-     - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32)
+     - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32) (比如 STM32F103.svd)
      - 配置 `Cortex-Debug` 的 `svdFile` 选项。
      - 注：使用 `JLink` 的话，调试配置请选择 `JLink`/`OpenOCD`。
 3. 编写代码。
@@ -138,7 +138,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
 
 1. 打开 `VSCode`。
 2. 打开工作区。
-3. 点击最下方的构建按钮。
+3. 点击最下方的`Build`按钮。
    - 编译成功后会在工作区的 `build` 文件夹下生成 `.hex` 和 `.elf` 文件。
    - 编译成功示例：
 
@@ -158,6 +158,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
      ```
 
    - 注：如果编译失败，可以查看错误信息，在 `VSCode` 中也会指明错误的位置。
+   - stm32cubemx 6.12.1 有bug，链接文件缺少RAM区域，需要手动更改，具体操作请查看[这里](https://community.st.com/t5/stm32cubemx-mcus/flash-ld-syntax-error-when-upgrading-to-cubemx-v6-12-1/m-p/725646/highlight/true#M29630)
 
 ---
 
