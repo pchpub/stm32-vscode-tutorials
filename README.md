@@ -113,7 +113,7 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
    - 编辑烧录配置。
    - 编辑项目属性。
    - 生成调试配置。
-     - 右击EIDE项目名，选择 `生成调试配置`。
+     - 右击EIDE项目名，选择 `生成调试器配置模板`。
      - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32) (比如 STM32F103.svd)
      - 配置 `launch.json` 文件 `Cortex-Debug`选项 的 `svdFile` 键。
      - 注：使用 `JLink` 的话，调试配置请选择 `JLink`/`OpenOCD`。
