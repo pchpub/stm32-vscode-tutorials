@@ -108,14 +108,14 @@ HAL 是 `STM32` 官方提供的库，封装了底层的寄存器操作，提供�
        - (所需要添加的文件夹为 `Makefile`文件 中的 `C_INCLUDES` 包含的目录)
      - 点击 预处理宏定义
        - 添加 `STM32F103xB` 和 `USE_HAL_DRIVER` 和其它宏定义
-       - (所需要添加的宏定义为makefile中的C_DEFS包含的宏定义 不包含`-D`前缀)
+       - (所需要添加的宏定义为 `Makefile` 中的 `C_DEFS` 包含的宏定义 不包含`-D`前缀)
    - 编辑构建配置。
    - 编辑烧录配置。
    - 编辑项目属性。
    - 生成调试配置。
-     - 配置 `Cortex-Debug`
+     - 右击EIDE项目名，选择 `生成调试配置`。
      - 下载 [SVD File](https://github.com/modm-io/cmsis-svd-stm32) (比如 STM32F103.svd)
-     - 配置 `Cortex-Debug` 的 `svdFile` 选项。
+     - 配置 `launch.json` 文件 `Cortex-Debug`选项 的 `svdFile` 键。
      - 注：使用 `JLink` 的话，调试配置请选择 `JLink`/`OpenOCD`。
    - 把 `startup_stm32f103xb.s` 文件移动到 /Core/Src 文件夹下
 3. 编写代码。
